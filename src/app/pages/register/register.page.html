@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Sing UP</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card class="centrar">
+    <ion-card-header>
+      <ion-card-subtitle style="text-align: center;">
+        <ion-icon class="icon" name="person-circle-outline"></ion-icon>
+      </ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      <form [formGroup]="Form" (ngSubmit)="onSubmit()">
+        <ion-item class="item" lines="full">
+          <ion-label position="floating">Email</ion-label>
+          <ion-input type="text" id="inputEmail" class="form-control" formControlName="email" required autofocus></ion-input>
+        </ion-item>
+
+        <ion-item class="item" lines="full">
+          <ion-label position="floating">Password</ion-label>
+          <ion-input type="password" class="form-control" formControlName="password" required></ion-input>
+        </ion-item>
+        
+        <ion-item class="item" lines="full">
+          <ion-label position="floating">Repeat Password</ion-label>
+          <ion-input type="password" class="form-control" formControlName="confirmarPassword" required></ion-input>
+        </ion-item>
+        <ion-label position="floating" class="errors" *ngIf="checarSiSonIguales()">Contraseñas no coinciden</ion-label>
+
+        <ion-button type="submit" expand="block" [disabled]="!Form.valid">Registrarse</ion-button>
+        <ion-button type="button" expand="block" color="medium" fill="clear" (click)="cancel()"> VOLVER</ion-button>
+      </form>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

@@ -1,0 +1,38 @@
+.item{
+    border-radius: 12px;
+    margin: 20px;
+}
+.icon{
+    zoom: 8.0;
+    text-align: center;
+}
+.centrar{
+    border-radius: 15px;
+    margin-right: 15%;
+    margin-left: 15%;
+}
+.smalltext{
+   padding-top: 5px;
+}
+
+
+ion-content {
+    --padding-top: 10%;
+    --background: url('https://static.vecteezy.com/system/resources/previews/002/504/349/non_2x/red-and-dark-blue-shaded-gradient-background-free-photo.jpg')  0/100% 100% no-repeat;
+}
+ 
+.input-group {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+ 
+.errors {
+    font-size: small;
+    color: #fff;
+    background: var(--ion-color-danger);
+    padding-left: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}

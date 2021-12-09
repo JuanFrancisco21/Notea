@@ -1,0 +1,18 @@
+{
+    "HELLO":"hola",
+    "BYE":"adiós",
+    "TAKE A PICTURE":"Fotografiar",
+    "CONTACTS":"contactos",
+    "NOTES":"Notas",
+    "LOGOUT":"Cerrar Sesion",
+    "SEARCHNOTE":"Buscar Nota...",
+    "NEWNOTE":"Nueva Nota",
+    "ADD":"Agregar",
+    "TITLE":"Titulo : ",
+    "DESCRIPTION":"Descripción : ",
+    "NEW":"Nueva",
+    "MENU":"MENU",
+    "LISTEN":"Escuchar",
+    "BACK":"Volver",
+    "EDITNOTE":"Editar Nota"
+}

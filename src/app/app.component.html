@@ -1,0 +1,18 @@
+<ion-app>
+
+  <ion-menu side="start" menu-id="first" content-id="main">
+    <ion-header>
+      <ion-toolbar color="primary">
+        <ion-title>{{'MENU' | translate | titlecase}}</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        ES <ion-toggle #mitoogle color="light" (ionChange)=cambiaIdioma($event)></ion-toggle> EN
+        
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+  <ion-router-outlet id="main"></ion-router-outlet>
+</ion-app>
