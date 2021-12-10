@@ -5,7 +5,7 @@ import { AuthguardService } from './services/authguard.service';
 const routes: Routes = [
   {
     path: 'private',
-    loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
+    loadChildren: () => import('./pages/tabs/tabs.module').then(m => m.TabsPageModule)
     ,canActivate:[AuthguardService]
   },
   {

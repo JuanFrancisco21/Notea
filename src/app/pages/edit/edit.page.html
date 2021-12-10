@@ -14,8 +14,8 @@
       <ion-label>{{'DESCRIPTION' | translate | titlecase}}</ion-label>
       <ion-textarea formControlName="description" [(ngModel)]="this.nota.description"></ion-textarea>
     </ion-item>
-    <ion-button expand="full" color="primary" type="submit" [disabled]="this.formNota.invalid || (!this.formNota.controls.title.dirty && !this.formNota.controls.description.dirty)">Agregar</ion-button>
-    <ion-button type="button" expand="block" color="medium" fill="clear" (click)="volver()"> VOLVER</ion-button>
+    <ion-button expand="full" color="primary" type="submit" [disabled]="this.formNota.invalid || (!this.formNota.controls.title.dirty && !this.formNota.controls.description.dirty)">{{'ADD' | translate | titlecase}}</ion-button>
+    <ion-button type="button" expand="block" color="medium" fill="clear" (click)="volver()">{{'BACK' | translate | titlecase}}</ion-button>
 
   </form>
 </ion-content>

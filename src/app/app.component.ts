@@ -35,6 +35,7 @@ export class AppComponent {
   }
   
   public async cambiaIdioma(event){
+
     if(event && event.detail && event.detail.checked){
       await this.storage.setItem('lang',{lang:'en'});
       this.traductor.use('en');

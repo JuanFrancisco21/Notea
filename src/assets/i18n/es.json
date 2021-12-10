@@ -14,5 +14,19 @@
     "MENU":"MENU",
     "LISTEN":"Escuchar",
     "BACK":"Volver",
-    "EDITNOTE":"Editar Nota"
+    "EDITNOTE":"Editar Nota",
+    "NOTE":"Nota",
+    "REMOVE":"Borrar Nota!",
+    "MESSAGE":"¿Estas seguro de borrarla?",
+    "CANCEL":"Cancelar",
+    "YES":"Si",
+    "SPEAKER":"es-ES",
+    "LOGIN":"INICIO SESIÓN",
+    "EMAIL":"Email",
+    "PASSWORD":"Contraseña",
+    "SIGN_IN":"Iiciar Sesión",
+    "SIGN_UP":"Registro",
+    "SIGN_IN_GOOGLE":"Inicio con Google",
+    "RPASSWORD":"Repite la Contraseña",
+    "PASSWORD_MATCH":"Contraseñas no coinciden"
 }

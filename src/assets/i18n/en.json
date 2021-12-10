@@ -14,5 +14,19 @@
     "MENU":"MENU",
     "LISTEN":"Listen",
     "BACK":"Go Back",
-    "EDITNOTE":"Edit Note"
+    "EDITNOTE":"Edit Note",
+    "NOTE":"Note",
+    "REMOVE":"Remove Note!",
+    "MESSAGE":"Are you sure?",
+    "CANCEL":"Cancel",
+    "YES":"Yes",
+    "SPEAKER":"en-EN",
+    "LOGIN":"LOGIN",
+    "EMAIL":"Email",
+    "PASSWORD":"Password",
+    "SIGN_IN":"Sign IN",
+    "SIGN_UP":"Sign UP",
+    "SIGN_IN_GOOGLE":"Sign In With Google",
+    "RPASSWORD":"Repeat Password",
+    "PASSWORD_MATCH":"Password doesn't match"
 }

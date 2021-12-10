@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>LOGIN</ion-title>
+    <ion-title>{{'LOGIN' | translate | titlecase}}</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -15,21 +15,21 @@
     <ion-card-content>
       <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
         <ion-item class="item" lines="full">
-          <ion-label position="floating">Email</ion-label>
+          <ion-label position="floating">{{'EMAIL' | translate | titlecase}}</ion-label>
           <ion-input type="text" id="inputEmail" class="form-control" formControlName="email" required autofocus></ion-input>
         </ion-item>
 
         <ion-item class="item" lines="full">
-          <ion-label position="floating">Password</ion-label>
+          <ion-label position="floating">{{'PASSWORD' | translate | titlecase}}</ion-label>
           <ion-input type="password" id="inputPassword" class="form-control" formControlName="password" required></ion-input>
         </ion-item>
 
-        <ion-button type="submit" expand="block" [disabled]="!loginForm.valid">Log in</ion-button>
-        <ion-button type="button" expand="block" color="medium" fill="clear" (click)="signUp()"> Sign up!</ion-button>
+        <ion-button type="submit" expand="block" [disabled]="!loginForm.valid">{{'SIGN_IN' | translate | titlecase}}</ion-button>
+        <ion-button type="button" expand="block" color="medium" fill="clear" (click)="signUp()">{{'SIGN_UP' | translate | titlecase}}</ion-button>
 
         <ion-button type="button" expand="block" color="primary" (click)="signinGoogle()">
           <ion-icon name="logo-google" slot="start"></ion-icon>
-          Sign in with Google
+          {{'SIGN_IN_GOOGLE' | translate | titlecase}}
         </ion-button>
       </form>
     </ion-card-content>

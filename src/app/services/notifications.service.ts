@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AlertController, LoadingController, ToastController } from '@ionic/angular';
+import { TranslateService } from '@ngx-translate/core';
 
 @Injectable({
   providedIn: 'root'
@@ -9,6 +10,7 @@ export class NotificationsService {
   private loadingIsUsed: Boolean;
 
   constructor(public alertController: AlertController,
+    private translate:TranslateService,
     private loading: LoadingController,
     private toast: ToastController) {
     this.loadingIsUsed = false;
@@ -19,23 +21,27 @@ export class NotificationsService {
    * @returns Promesa con un bolean.
    */
   async presentAlertConfirm(): Promise<Boolean> {
+    let header=this.translate.instant('REMOVE');
+    let message=this.translate.instant('MESSAGE');
+    let cancel=this.translate.instant('CANCEL');
+    let accept=this.translate.instant('YES');
     return new Promise(async (resolve, reject) => {
       try {
         let result: Boolean = false;
         const alert = await this.alertController.create({
           cssClass: 'my-custom-class',
-          header: 'Borrado de nota!',
-          message: '¿Estas seguro de borrarla?',
+          header: header,
+          message: message,
           buttons: [
             {
-              text: 'NO',
+              text: cancel,
               role: 'cancel',
               cssClass: 'secondary',
               handler: (blah) => {
                 resolve(result);
               }
             }, {
-              text: 'SI',
+              text: accept,
               handler: () => {
                 resolve(result = true);
               }
