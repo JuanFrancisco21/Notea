@@ -1,0 +1,13 @@
+{
+	"appId": "com.juanfran.Notea",
+	"appName": "Notea",
+	"webDir": "www",
+	"bundledWebRuntime": false,
+	"plugins": {
+		"GoogleAuth": {
+		  "scopes": ["profile", "email"],
+		  "serverClientId": "740527458319-k59bklneq0sqfkltnj9c0jah5uletnt0.apps.googleusercontent.com",
+		  "forceCodeForRefreshToken": true
+		}
+	  }
+}
