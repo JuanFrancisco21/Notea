@@ -3,6 +3,7 @@ import { AngularFirestore, AngularFirestoreCollection, DocumentReference } from 
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Note } from '../model/Note';
+import { AuthService } from './auth.service';
 
 @Injectable({
   providedIn: 'root'
@@ -10,9 +11,16 @@ import { Note } from '../model/Note';
 export class NoteService {
   private last:any=null;
   private myCollection: AngularFirestoreCollection;
+  private myCollectionString:string;
 
-  constructor(private db: AngularFirestore) {
-    this.myCollection = db.collection<any>(environment.firebaseConfig.todoCollection);
+  constructor(private db: AngularFirestore,private authS:AuthService) {
+    //this.myCollection = db.collection<any>(environment.firebaseConfig.todoCollection);
+    if (authS.user!=null) {
+      this.myCollectionString = authS.user.email;
+      this.myCollection = db.collection<any>(this.myCollectionString);
+    } else {
+      this.myCollection = db.collection<any>(environment.firebaseConfig.todoCollection);
+    }
   }
 
   /**
@@ -24,10 +32,7 @@ export class NoteService {
     return new Promise(async (resolve, reject) => {
       try {
         let response: DocumentReference<firebase.default.firestore.DocumentData> =
-          await this.myCollection.add({
-            title: note.title,
-            description: note.description
-          });
+          await this.myCollection.add(note);
         resolve(response.id);
       } catch (err) {
         reject(err);
@@ -75,10 +80,10 @@ export class NoteService {
       let result: Note[] = [];
       let query=null;
       if(this.last){
-        query=this.db.collection<any>(environment.firebaseConfig.todoCollection,
+        query=this.db.collection<any>(this.myCollectionString,
           ref => ref.limit(12).startAfter(this.last));
       }else{
-        query=this.db.collection<any>(environment.firebaseConfig.todoCollection,
+        query=this.db.collection<any>(this.myCollectionString,
           ref => ref.limit(12));
       }
       
